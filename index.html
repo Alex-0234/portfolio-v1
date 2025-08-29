@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
+    </head>
+    <body>
+        <header class="header-open fixed">
+            <img id="header-image" src="./assets/icons/image.jpg">
+            <h1 id="header-name">Alex Liška</h1>
+            <nav class="navigation">
+                <a class="center header-links" href="/index.html">Home</a>
+                <a class="center header-links" href="/experiences.html">Experiences</a>
+                <a class="center header-links" href="/projects.html">Projects</a>
+            </nav>
+            <svg id="sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" ><path d="M6.5 2.25a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0V4.5h6.75a.75.75 0 0 0 0-1.5H6.5zM11 6.5a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0v-.75h2.25a.75.75 0 0 0 0-1.5H11zM5.75 10a.75.75 0 0 1 .75.75v.75h6.75a.75.75 0 0 1 0 1.5H6.5v.75a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75m-3-2.75H8.5v1.5H2.75a.75.75 0 0 1 0-1.5M4 3H2.75a.75.75 0 0 0 0 1.5H4zm-1.25 8.5H4V13H2.75a.75.75 0 0 1 0-1.5"/></svg>
+            <div id="sidebar" class="sidebarHidden">
+                <svg id="sidebar-x" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" ><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                <div >
+                    <label class="toggle">
+                        <input type="checkbox" id="myToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+
+        </header>
+        <main class="center">
+                <section class="section hidden" id="section1"></section>
+                <section class="section hidden" id="section2"></section>
+                <section class="section hidden" id="section3"></section>
+                <section class="hidden" id="section4">
+
+                </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

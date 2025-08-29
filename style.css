@@ -1,0 +1,288 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/* ========================
+   1. Base / Resets
+   ======================== */
+
+:root {
+    --bg-color: #000000;
+    --text-color: #D1D1D1;
+    --primary-color:#040403;
+    --secondary-color: #0C080A;
+    --hightlight: #EAD94C;
+}
+body.light-theme {
+    --bg-color: #000000;
+    --text-color: #D1D1D1;
+    --primary-color:#6610F2;
+    --secondary-color: #0C080A;
+    --hightlight: #EAD94C;
+}
+
+/* ========================
+   2. Layout
+   ======================== */
+
+html {
+    font-family: 'Poppins', sans-serif, serif;
+}
+body {
+    /* Box */
+
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    /* Visuals */
+    background-color: var(--bg-color);
+}
+header {
+    /* Position */
+
+    /* Box */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    /* Visuals */
+    z-index: 1000;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+main {
+    /* Box */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-top: 65vh;
+    /* Visuals */
+    z-index: 90;
+    background-image: linear-gradient(
+      var(--secondary-color) 0%,
+      var(--secondary-color) 20%,
+      #ffffff20 60%,
+      #ffffff40 100%
+      );
+}
+
+
+/* ========================
+   3. Components
+   ======================== */
+
+.navigation {
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    /* Box */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    width: 50%;
+   }
+
+#sidebar {
+  /* Position */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Box */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  width: 20vw;
+  padding-right: 1rem;
+  /* Visuals */
+  z-index: 200;
+  background-color: var(--secondary-color);
+
+  transition: all 0.2s ease-in;
+  }
+
+.section {
+  display: block;
+  height: 25rem;
+  width: 60vw;
+  margin: 3rem;
+  border-radius: 2rem;
+  border: solid 1px var(--text-color);
+  z-index: 100;
+  background-color: var(--secondary-color);
+  transition: all 0.5s ease;
+}
+#section1 {
+  margin-top: 32rem;
+}
+#section4 {
+  display: block;
+  height: 25rem;
+  width: 80vw;
+  margin: 3rem;
+  border-radius: 2rem;
+  border: solid 1px var(--text-color);
+  z-index: 100;
+  background-color: var(--secondary-color);
+  transition: all 0.5s ease;
+}
+
+/* ========================
+   4. Typography 
+   ======================== */
+
+.header-links {
+  /* Box */
+  height: 2rem;
+  width: 5rem;
+  padding: 0.4rem; 
+  margin-top: 2rem;
+  margin: 1.5rem;
+  /* Text */
+  font-weight: 500;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  text-decoration: none;
+  /* Visuals */
+  color: var(--text-color);
+  cursor: pointer;
+}
+#header-name {
+  margin-bottom: 15rem;
+}
+
+
+
+
+
+/* ========================
+   5. Visuals / Animations 
+   ======================== */
+#sidebar-icon {
+  /* Position */
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  fill: var(--text-color);
+  padding: 0.2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+#sidebar-x {
+  /* Position */
+  display: block;
+  place-self: end;
+  fill: var(--text-color);
+  stroke: var(--text-color);
+  padding: 0.4rem;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+#header-image {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 10rem;
+  object-fit: cover;
+}
+
+/* ========================
+   6. Utility 
+   ======================== */
+.fixed {
+    position: fixed;
+    top:0;
+   }
+.block {
+  display:block;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+  animation : section 0.5s ease-in;
+}
+.sidebarHidden {
+  transform: translateX(800px);
+  opacity: 0;
+}
+.sidebarShow {
+  transform: translateX(0);
+  opacity: 1;
+}
+.header-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes section {
+  from {
+    opacity: 0;
+    
+  }
+  to {
+    opacityy: 1;
+    
+  }
+}
+
+
+
+/* Hide the checkbox */
+.toggle input {
+  display: none;
+}
+
+/* The background track */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+/* The circle (thumb) */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Checked (ON) state */
+.toggle input:checked + .slider {
+  background-color: var(--text-color);
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(26px);
+}
