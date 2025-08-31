@@ -8,14 +8,15 @@
     </head>
     <body>
         <header class="header-open fixed">
-            <img id="header-image" src="./assets/icons/image.jpg">
+            <img id="header-image" src="/assets/images/image.jpg">
             <h1 id="header-name">Alex Liška</h1>
             <nav class="navigation">
-                <a class="center header-links" href="/index.html">Home</a>
-                <a class="center header-links" href="/experiences.html">Experiences</a>
-                <a class="center header-links" href="/projects.html">Projects</a>
+                <a class="center header-links" href="#bio">Bio</a>
+                <a class="center header-links" href="#skills">Skills</a>
+                <a class="center header-links" href="#project-slide">Projects</a>
             </nav>
-            <svg id="sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" ><path d="M6.5 2.25a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0V4.5h6.75a.75.75 0 0 0 0-1.5H6.5zM11 6.5a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0v-.75h2.25a.75.75 0 0 0 0-1.5H11zM5.75 10a.75.75 0 0 1 .75.75v.75h6.75a.75.75 0 0 1 0 1.5H6.5v.75a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75m-3-2.75H8.5v1.5H2.75a.75.75 0 0 1 0-1.5M4 3H2.75a.75.75 0 0 0 0 1.5H4zm-1.25 8.5H4V13H2.75a.75.75 0 0 1 0-1.5"/></svg>
+            <h2 class="scroll-alert">Scroll down</h2>
+            <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" ><path d="M6.5 2.25a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0V4.5h6.75a.75.75 0 0 0 0-1.5H6.5zM11 6.5a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0v-.75h2.25a.75.75 0 0 0 0-1.5H11zM5.75 10a.75.75 0 0 1 .75.75v.75h6.75a.75.75 0 0 1 0 1.5H6.5v.75a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75m-3-2.75H8.5v1.5H2.75a.75.75 0 0 1 0-1.5M4 3H2.75a.75.75 0 0 0 0 1.5H4zm-1.25 8.5H4V13H2.75a.75.75 0 0 1 0-1.5"/></svg>
             <div id="sidebar" class="sidebarHidden">
                 <svg id="sidebar-x" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" ><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
                 <div >
@@ -26,14 +27,64 @@
                 </div>
             </div>
             
-
         </header>
         <main class="center">
-                <section class="section hidden" id="section1"></section>
-                <section class="section hidden" id="section2"></section>
-                <section class="section hidden" id="section3"></section>
-                <section class="hidden" id="section4">
+                <section class="section hidden" id="bio">
+                    <h1> Bio: </h1>
+                    <p>Hi, I’m Alex Liška, a self-taught developer in progress. Currently learning HTML, CSS, and JavaScript. Building small projects to grow my skills. </p>
+                    <ul>
+                        <li>I love building clean, functional web apps and learning new technologies. </li> 
+                        <li>I am studying Mechatronics, but slowly transitioning into web development and design through self-learning and projects. </li>
+                    </ul>
 
+                    
+                </section>
+                <section class="section hidden" id="skills">
+                    <h1>Skills: </h1>
+                    <ol>
+                        <li>Languages:
+                            <ul>
+                                <li id="html">HTML</li>
+                                <li id="css">CSS</li>
+                                <li id="js">JavaScript</li>
+                            </ul>
+                        </li>
+                        <!--<li>Frameworks:
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </li>-->
+                    </ol>
+                </section>
+                <section class=" slider-container hidden" id="project-slide">
+                     <div class="slider-track">
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 1">
+                        <p>Description 1</p>
+                        </div>
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 2">
+                        <p>Description 2</p>
+                        </div>
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 3">
+                        <p>Description 3</p>
+                        </div>
+                        
+                        <!-- Duplicate slides for seamless loop -->
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 1">
+                        <p>Description 1</p>
+                        </div>
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 2">
+                        <p>Description 2</p>
+                        </div>
+                        <div class="slide">
+                        <img class="project" src="https://placehold.co/300x200" alt="Image 3">
+                        <p>Description 3</p>
+                        </div>
+                    </div>
                 </section>
         </main>
         <footer>
