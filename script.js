@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const sectionArray = Array.from(document.querySelectorAll('.section'))
     sectionAlignment(sectionArray);
-    /* Initial settings */
+
     sidebarIcon.style.opacity = "0";
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -31,9 +31,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
         headerH1.style.opacity = "0";
   });
 
-});
-    
+    });
     /* Event Listeners */ 
+    window.addEventListener('mousemove', (e)=> {
+         const dot = document.createElement("div");
+        dot.className = "dots";
+        dot.style.left = `${e.clientX}px`;
+        dot.style.top = `${e.clientY}px`;
+        header.appendChild(dot);
+    
+    setTimeout(() => {
+        dot.remove();
+      }, 10);
+    });
+    
     myToggle.addEventListener('change', () => {
         myToggle.checked ? body.classList.add('light-theme') : body.classList.remove('light-theme');
     });
@@ -108,13 +119,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
         track.style.animationPlayState = 'running';
         });
 
-        // Manual scroll using wheel while hovering
-        container.addEventListener('wheel', (e) => {
-        e.preventDefault(); // prevent page scroll
-        container.scrollLeft += e.deltaY; // scroll horizontally
-        });
-    });
 
+})
 function sectionAlignment(sectionArray) {
         sectionArray.forEach((section, i) => {
             if ((i + 4) % 2 === 0) {
@@ -122,6 +128,7 @@ function sectionAlignment(sectionArray) {
             } else {
                 section.style.transform = 'translateX(100px)';
             }
-        })
-    }
+        });
+}
+
 

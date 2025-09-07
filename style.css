@@ -47,7 +47,7 @@ header {
     border-bottom-right-radius: 0.2rem;
     /* Visuals */
     z-index: 1000;
-    background-color: var(--bg-color);
+    background-color: transparent;
     color: var(--text-color);
 }
 
@@ -109,7 +109,7 @@ main {
 .section {
   display: block;
   height: auto;
-  width: 60vw;
+  width: 52vw;
   padding: 4rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -118,13 +118,19 @@ main {
   background-color: rgba(0,0,0,0);
   transition: all 0.5s ease;
 }
+.section h1 {
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+}
+.section p, .section ul li {
+   font-size: clamp(0.8rem, 1.5vw, 2rem);
+}
 #bio {
   margin-top: 32rem;
 }
 #project-slide {
   display: block;
-  height: 25rem;
-  width: 80vw;
+  height: auto;
+  width: 90%;
   margin: 3rem;
   border-radius: 2rem;
   border: solid 1px var(--text-color);
@@ -138,19 +144,46 @@ main {
    ======================== */
 
 .header-links {
+  position:relative;
   /* Box */
   height: 2rem;
-  width: 5rem;
+  width: 6.7rem;
   padding: 0.4rem; 
   margin-top: 2rem;
   margin: 1.5rem;
   /* Text */
   font-weight: 500;
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(0.8rem, 1.5vw, 2rem);
   text-decoration: none;
   /* Visuals */
   color: var(--text-color);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header-links:hover {
+  color: var(--hightlight);
+  
+}
+.header-links:hover::after {
+  color: var(--hightlight);
+  right: -1.2rem;
+}
+.header-links:hover::before {
+  color: var(--hightlight);
+  left: -1.2rem;
+  
+}
+.header-links::before {
+  content:"[";
+  left: -0.8rem;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.header-links::after {
+  content:"]";
+  right: -0.8rem;
+  position: absolute;
+  transition: all 0.5s ease;
 }
 #header-name {
   margin-bottom: 15rem;
@@ -209,6 +242,10 @@ h1 {
   padding: 0.2rem;
   margin-right: 1rem;
   cursor: pointer;
+  
+}
+.sidebar-icon:hover {
+  fill: var(--hightlight);
 }
 #sidebar-x {
   /* Position */
@@ -225,6 +262,16 @@ h1 {
   width: 20rem;
   border-radius: 10rem;
   object-fit: cover;
+}
+.dots {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: var(--hightlight);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
 }
 
 
@@ -360,6 +407,7 @@ h1 {
 /* ======= PICTURE SHOWCASE ======== */
 .slider-container {
   width: 100%;
+  height: 60%;
   overflow: hidden;
   position: relative;
   background: #f5f5f5;
@@ -369,25 +417,29 @@ h1 {
 .slider-track {
   display: flex;
   width: 100%;
-  animation: scrollPics 6s linear infinite;
+  height: 60%;
+  animation: scrollPics 12s linear infinite;
 }
 
 .slide {
   flex: 0 0 auto;
-  width: 25rem;
+  height: 50%;
+  width: 50%;
   margin-right: 20px;
+  object-fit: contain;
   text-align: center;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
+  object-position: top;
+  height: auto;
   display: block;
-  object-fit: cover;
+  
   border-radius: 1rem;
 }
 
 @keyframes scrollPics {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-155%); }
 }
